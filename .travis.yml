@@ -1,3 +1,14 @@
 language: ruby
 rvm: 
   - 2.6.3
+
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database travic_ci_test;' -U postgres
+
+  before_install:
+    - gem install bundler
+
+  
