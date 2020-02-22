@@ -2,24 +2,21 @@ require "sinatra"
 require 'sinatra/activerecord'
 require 'rubygems'
 require 'httparty'
+require 'json'
 
 class ApplicationController < Sinatra::Base
   get '/' do
     "Root page of Sinatra App - Microservice API"
   end
 
-  get '/places/:destination' do
+  get '/api/v1/destination/:place' do
+    response = HTTParty.get("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{params["place"]}&inputtype=textquery&fields=geometry/location,formatted_address,photos&key=#{ENV['GOOGLE_API_KEY']}")
+    content_type :json
+    response.to_json
+
     # checks to see if the location is in the db
     # if not do below
-    (params["destination"])
+    # retrieve_coords(params["place"])
     # create new instance of serializer
-  end
-
-  def retrieve_coords(destination)
-    response = HTTParty.get("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{destination}&inputtype=textquery&fields=geometry&key=#{ENV['GOOGLE_API_KEY']}")
-    coords = response["candidates"].first["geometry"]["location"]
-    #  # mocked coords
-    # coords = {"lat"=>39.7392358, "lng"=>-104.990251} # denver
-    # coords = {"lat"=>29.7604267, "lng"=>-95.3698028} # houston
   end
 end
