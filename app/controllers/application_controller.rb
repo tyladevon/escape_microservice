@@ -13,10 +13,5 @@ class ApplicationController < Sinatra::Base
     response = HTTParty.get("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{params["place"]}&inputtype=textquery&fields=geometry/location,formatted_address,photos&key=#{ENV['GOOGLE_API_KEY']}")
     content_type :json
     response.to_json
-
-    # checks to see if the location is in the db
-    # if not do below
-    # retrieve_coords(params["place"])
-    # create new instance of serializer
   end
 end
