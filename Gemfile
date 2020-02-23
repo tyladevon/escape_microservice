@@ -1,12 +1,17 @@
 source "https://rubygems.org"
-gem 'sinatra'
+gem 'sinatra', require: 'sinatra/base'
 gem 'pg'
-gem 'sinatra-activerecord'
 gem 'activerecord'
+gem 'sinatra-activerecord'
 gem 'rake'
 gem 'httparty'
-gem 'pry'
-gem 'dotenv'
-gem 'rspec'
 gem 'json'
-gem 'rack-test'
+
+group :development, :test do
+  gem 'pry'
+  gem 'dotenv'
+  gem 'rspec'
+  gem 'rspec-core'
+  gem 'rack-test'
+  gem 'capybara'
+end

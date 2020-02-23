@@ -2,6 +2,7 @@ require "sinatra"
 require 'rubygems'
 require 'httparty'
 require 'json'
+require './app/models/destination'
 
 class ApplicationController < Sinatra::Base
   get '/' do
