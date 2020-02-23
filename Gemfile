@@ -6,10 +6,10 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'httparty'
 gem 'json'
+gem 'dotenv'
 
 group :development, :test do
   gem 'pry'
-  gem 'dotenv'
   gem 'rspec'
   gem 'rspec-core'
   gem 'rack-test'
