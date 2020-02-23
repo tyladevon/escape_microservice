@@ -14,4 +14,6 @@ group :development, :test do
   gem 'rspec-core'
   gem 'rack-test'
   gem 'capybara'
+  gem 'webmock'
+  gem 'vcr'
 end
