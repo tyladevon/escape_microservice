@@ -4,7 +4,7 @@
 ````
 
 ````
-**Related Endpoint**  
+**Related Endpoint:**  
 ``  
 
 **Related Issues:**
