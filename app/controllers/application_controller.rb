@@ -2,7 +2,9 @@ require "sinatra"
 require 'rubygems'
 require 'httparty'
 require 'json'
+require 'sinatra/activerecord'
 require './app/models/destination'
+require './app/services/google_places_service'
 
 class ApplicationController < Sinatra::Base
   get '/' do
@@ -10,8 +12,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/api/v1/destination/:place' do
-    response = HTTParty.get("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{params["place"]}&inputtype=textquery&fields=geometry/location,formatted_address,name&key=#{ENV['GOOGLE_API_KEY']}")
     content_type :json
+    response = GooglePlacesService.search_destination(params["place"])
+    require "pry"; binding.pry
     response.to_json
   end
 end
