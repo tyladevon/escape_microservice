@@ -9,7 +9,8 @@ before_install:
 services:
 - postgresql
 script:
-  - rake db:migrate RACK_ENV=test
+  - bundle exec rake db:create RACK_ENV=test
+  - bundle exec rake db:migrate RACK_ENV=test
   - bundle exec rspec
 deploy:
   provider: heroku
