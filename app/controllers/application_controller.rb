@@ -13,13 +13,7 @@ class ApplicationController < Sinatra::Base
   get '/api/v1/destination/:place' do
     content_type :json
     response = GooglePlacesService.search_destination(params["place"])
-    place_info = response["candidates"].first
-    destination = Destination.create(
-      name: place_info["name"],
-      full_address: place_info["formatted_address"],
-      latitude: place_info["geometry"]["location"]["lat"],
-      longitude: place_info["geometry"]["location"]["lng"]
-    )
+    destination = Destination.add_destination(response)
     response.to_json
   end
 end
