@@ -1,10 +1,5 @@
-**Functionality:**  
-*  
-**Testing:**
-````
+**Functionality:**
 
-````
-**Related Endpoint:**  
-``  
+**Testing:**
 
 **Related Issues:**
