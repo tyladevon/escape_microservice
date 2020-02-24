@@ -1,19 +1,18 @@
-require "sinatra"
-require 'sinatra/activerecord'
+require 'sinatra'
 require 'rubygems'
-require 'httparty'
 require 'json'
+require 'sinatra/activerecord'
+require './app/controllers/destinations_controller'
 
 class ApplicationController < Sinatra::Base
   get '/' do
     "Root page of Sinatra App - Microservice API"
   end
 
-  get '/places/:destination' do
-    # checks to see if the location is in the db
-    # if not do below
-    retrieve_coords(params["destination"])
-    # create new instance of serializer
+  get '/api/v1/destination/:place' do
+    content_type :json
+    response = DestinationsController.search(params["place"])
+    response.to_json
   end
 
   def retrieve_coords(destination)

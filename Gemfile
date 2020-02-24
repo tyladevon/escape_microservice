@@ -1,11 +1,25 @@
 source "https://rubygems.org"
-gem 'sinatra'
-gem 'shotgun'
-gem 'require_all'
+gem 'sinatra', require: 'sinatra/base'
 gem 'pg'
+gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rake'
 gem 'httparty'
-gem 'pry'
-gem 'dotenv'
 gem 'json'
+gem 'dotenv'
+gem 'fast_jsonapi'
+
+group :development, :test do
+  gem 'pry'
+  gem 'rspec'
+  gem 'rspec-core'
+  gem 'rack-test'
+  gem 'capybara'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'shoulda-matchers'
+end
+
+group :test do
+  gem 'database_cleaner-active_record'
+end
