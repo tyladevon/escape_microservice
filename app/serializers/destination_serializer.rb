@@ -1,3 +1,4 @@
+require 'fast_jsonapi'
 class DestinationSerializer
   include FastJsonapi::ObjectSerializer
   set_type :destination
