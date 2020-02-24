@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
       key=#{ENV['MOUNTAIN_API_KEY']}&
       lat=#{climb_params[:lat]}&lon=#{climb_params[:lon]}&
       maxDistance=#{climb_params[:maxDist]}&
-      maxResults=2&
+      maxResults=50&
       minDiff=#{climb_params[:min_diff]}&maxDiff=#{climb_params[:max_diff]}")
 
       content_type :json
