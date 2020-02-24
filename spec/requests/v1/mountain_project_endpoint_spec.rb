@@ -22,7 +22,7 @@ describe "Mountain Project API endpoint" do
             max_diff: max_diff_param}
     expect(last_response).to be_successful
     parsed_routes = JSON.parse(last_response.body)["routes"]
-    expect(parsed_routes.count).to eq(2)
+    expect(parsed_routes.count).to eq(50)
 
 
   end
