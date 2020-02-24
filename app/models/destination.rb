@@ -1,2 +1,2 @@
-class Destination
+class Destination < ActiveRecord::Base
 end
