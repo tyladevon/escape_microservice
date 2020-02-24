@@ -8,6 +8,7 @@ gem 'httparty'
 gem 'json'
 gem 'dotenv'
 gem 'fast_jsonapi'
+gem 'pry'
 
 group :development, :test do
   gem 'pry'
