@@ -4,9 +4,13 @@ require './app/serializers/destination_serializer'
 
 class DestinationsController
   def self.search(place)
-    response = GooglePlacesService.search_destination(place)
-    destination = Destination.add_destination(response)
-    json_response = DestinationSerializer.new(destination)
-    return json_response
+    place_index_in_db = Destination.find_by(name: place)
+
+    unless place_index_in_db
+      google_places_response = GooglePlacesService.search_destination(place)
+      place_index_in_db = Destination.add_destination(google_places_response)
+    end
+
+    DestinationSerializer.new(place_index_in_db)
   end
 end
