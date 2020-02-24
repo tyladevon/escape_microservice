@@ -17,12 +17,12 @@ describe "Destination places endpoint" do
       get "/api/v1/destination/#{denver_name}"
       expect(last_response).to be_successful
       parsed_response = JSON.parse(last_response.body)
-      place_info = parsed_response["candidates"].first
+      place_info = parsed_response["data"]["attributes"]
 
       expect(place_info["name"]).to eq(denver_name)
-      expect(place_info["formatted_address"]).to eq(denver_address)
-      expect(place_info["geometry"]["location"]["lat"]).to eq(denver_lat)
-      expect(place_info["geometry"]["location"]["lng"]).to eq(denver_lng)
+      expect(place_info["full_address"]).to eq(denver_address)
+      expect(place_info["latitude"]).to eq(denver_lat)
+      expect(place_info["longitude"]).to eq(denver_lng)
     end
   end
 end
