@@ -1,6 +1,5 @@
-require "sinatra"
+require 'sinatra'
 require 'rubygems'
-require 'httparty'
 require 'json'
 require 'sinatra/activerecord'
 require './app/models/destination'
@@ -14,7 +13,13 @@ class ApplicationController < Sinatra::Base
   get '/api/v1/destination/:place' do
     content_type :json
     response = GooglePlacesService.search_destination(params["place"])
-    require "pry"; binding.pry
+    place_info = response["candidates"].first
+    destination = Destination.create(
+      name: place_info["name"],
+      full_address: place_info["formatted_address"],
+      latitude: place_info["geometry"]["location"]["lat"],
+      longitude: place_info["geometry"]["location"]["lng"]
+    )
     response.to_json
   end
 end
