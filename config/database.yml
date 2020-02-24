@@ -6,6 +6,14 @@ development:
   username:
   password:
 
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: escape_microservice
+  pool: 2
+  username:
+  password:
+
 production:
   adapter: postgresql
   encoding: unicode

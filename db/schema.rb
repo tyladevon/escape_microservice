@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 2020_02_20_031714) do
   enable_extension "plpgsql"
 
   create_table "destinations", force: :cascade do |t|
-    t.string "location"
-    t.float "lat"
-    t.float "lng"
+    t.string "name"
+    t.string "full_address"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
