@@ -61,6 +61,8 @@ GEM
     rack (2.2.2)
     rack-protection (2.0.8.1)
       rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rake (13.0.1)
     regexp_parser (1.6.0)
     rspec (3.9.0)
@@ -114,6 +116,7 @@ DEPENDENCIES
   json
   pg
   pry
+  rack-test
   rake
   rspec
   rspec-core
