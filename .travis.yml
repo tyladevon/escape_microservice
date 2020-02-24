@@ -9,8 +9,8 @@ before_install:
 services:
 - postgresql
 script:
-- bundle exec rspec
-- bundle exec rake db:migrate
+  - bundle exec rake db:migrate
+  - bundle exec rspec
 deploy:
   provider: heroku
   api_key:
