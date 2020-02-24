@@ -25,23 +25,34 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/api/v1/climb_results' do
-    incoming_params = {:lat => 40.03,
-              :lon => -105.25,
-              :max_dist => 10,
-              :min_diff => 5.7,
-              :max_diff => 5.12
-            }
+    lat = 40.03
+    # params['lat']
+    lon = -105.25
+    # params['lon']
+    max_dist = 10
+    # params['max_dist']
+    min_diff = 5.7
+    # params['min_diff']
+    max_diff = 5.12
+    # params['max_diff']
 
-    climb_data_results(incoming_params)
+    # incoming_params = {:lat => 40.03,
+    #           :lon => -105.25,
+    #           :max_dist => 10,
+    #           :min_diff => 5.7,
+    #           :max_diff => 5.12
+    #         }
+
+    climb_data_results(lat, lon, max_dist, min_diff, max_diff)
   end
 
-  def climb_data_results(climb_params)
+  def climb_data_results(lat, lon, max_dist, min_diff, max_diff)
     response = HTTParty.get("https://www.mountainproject.com/data/get-routes-for-lat-lon?
       key=#{ENV['MOUNTAIN_API_KEY']}&
-      lat=#{climb_params[:lat]}&lon=#{climb_params[:lon]}&
-      maxDistance=#{climb_params[:max_dist]}&
+      lat=#{lat}&lon=#{lon}&
+      maxDistance=#{max_dist}&
       maxResults=2&
-      minDiff=#{climb_params[:min_diff]}&maxDiff=#{climb_params[:max_diff]}")
+      minDiff=#{min_diff}&maxDiff=#{max_diff}")
 
       content_type :json
       response.to_json
@@ -49,7 +60,7 @@ class ApplicationController < Sinatra::Base
 
   private
 
-  def climb_params
-    params.permit(:min_diff, :max_diff, :maxDist, :lat, :lon)
-  end
+  # def climb_params
+  #   params.permit(:min_diff, :max_diff, :maxDist, :lat, :lon)
+  # end
 end
