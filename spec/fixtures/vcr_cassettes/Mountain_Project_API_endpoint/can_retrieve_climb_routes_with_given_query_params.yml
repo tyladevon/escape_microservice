@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.mountainproject.com/data/get-routes-for-lat-lon?%20%20%20%20%20%20key=200688937-3e1f4800a90a38c8a3d2d427bc7c5176&%20%20%20%20%20%20lat=40.03&%20%20%20%20%20%20maxDistance=&%20%20%20%20%20%20maxResults=2&%20%20%20%20%20%20minDiff=5.7&lon=-105.25&maxDiff=5.12
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 24 Feb 2020 19:22:47 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private
+      Pragma:
+      - no-cache
+      X-Ap-Request-Id:
+      - 40c70c6c-2813-427f-8951-8e9358dee9e8
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '512'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "routes": [
+                {
+                    "id": 105750424,
+                    "name": "Death and Transfiguration",
+                    "type": "Trad",
+                    "rating": "5.11b",
+                    "stars": 5,
+                    "starVotes": 88,
+                    "pitches": 1,
+                    "location": [
+                        "Colorado",
+                        "Boulder",
+                        "Flatirons",
+                        "North",
+                        "Green Mountain Pinnacle"
+                    ],
+                    "url": "https:\/\/www.mountainproject.com\/route\/105750424\/death-and-transfiguration",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/climb\/107332316_sqsmall_1494182193.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/climb\/107332316_small_1494182193.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/climb\/107332316_smallMed_1494182193.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/climb\/107332316_medium_1494182193.jpg",
+                    "longitude": -105.2944,
+                    "latitude": 39.9834
+                },
+                {
+                    "id": 106207686,
+                    "name": "The Shaft",
+                    "type": "Sport, TR",
+                    "rating": "5.12b",
+                    "stars": 4.8,
+                    "starVotes": 175,
+                    "pitches": 1,
+                    "location": [
+                        "Colorado",
+                        "Boulder",
+                        "Flatirons",
+                        "Central",
+                        "Dinosaur Rock"
+                    ],
+                    "url": "https:\/\/www.mountainproject.com\/route\/106207686\/the-shaft",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/climb\/107165108_sqsmall_1494170577.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/climb\/107165108_small_1494170577.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/climb\/107165108_smallMed_1494170577.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/climb\/107165108_medium_1494170577.jpg",
+                    "longitude": -105.2875,
+                    "latitude": 39.9734
+                }
+            ],
+            "success": 1
+        }
+    http_version: null
+  recorded_at: Mon, 24 Feb 2020 19:22:47 GMT
+recorded_with: VCR 5.1.0
