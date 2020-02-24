@@ -19,3 +19,7 @@ group :development, :test do
   gem 'vcr'
   gem 'shoulda-matchers'
 end
+
+group :test do
+  gem 'database_cleaner-active_record'
+end
