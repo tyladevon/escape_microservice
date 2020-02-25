@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.mountainproject.com/data/get-routes-for-lat-lon?%20%20%20%20%20%20key=200688937-3e1f4800a90a38c8a3d2d427bc7c5176&%20%20%20%20%20%20lat=40.03&%20%20%20%20%20%20maxDistance=&%20%20%20%20%20%20maxResults=50&%20%20%20%20%20%20minDiff=5.7&lon=-105.25&maxDiff=5.12
+    uri: https://www.mountainproject.com/data/get-routes-for-lat-lon?key=200688937-3e1f4800a90a38c8a3d2d427bc7c5176&lat=40.03&lon=-105.25&maxDiff=5.12&maxDistance=&maxResults=2&minDiff=5.7
     body:
       encoding: US-ASCII
       string: ''
