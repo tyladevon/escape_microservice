@@ -23,8 +23,5 @@ describe "Mountain Project API endpoint" do
     expect(last_response).to be_successful
     parsed_routes = JSON.parse(last_response.body)["routes"]
     expect(parsed_routes.count).to eq(50)
-
-
   end
-
 end
