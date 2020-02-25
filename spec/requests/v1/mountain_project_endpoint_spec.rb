@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe "Mountain Project API endpoint" do
   include Rack::Test::Methods
-
   def app
     ApplicationController
   end
