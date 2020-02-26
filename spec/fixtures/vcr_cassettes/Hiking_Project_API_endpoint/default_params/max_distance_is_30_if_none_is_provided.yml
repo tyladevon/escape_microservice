@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.hikingproject.com/data/get-trails?key=200683561-7c95d710fabdc975bdd22885fc3c4615&lat=40.0274&lon=-105.2519&maxDistance=&maxResults=2&sort=distance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 26 Feb 2020 03:52:07 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private
+      Pragma:
+      - no-cache
+      X-Ap-Request-Id:
+      - 95368730-a234-4160-aea5-cd32dbccb385
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '765'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "trails": [
+                {
+                    "id": 7006781,
+                    "name": "Dakota Ridge to Sanitas Valley Loop",
+                    "type": "Hike",
+                    "summary": "A technical ascent with a great view of Boulder, followed by a nice, open downhill pitch.",
+                    "difficulty": "greenBlue",
+                    "stars": 4,
+                    "starVotes": 8,
+                    "location": "Boulder, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7006781\/dakota-ridge-to-sanitas-valley-loop",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_sqsmall_1554158942.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_small_1554158942.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_smallMed_1554158942.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_medium_1554158942.jpg",
+                    "length": 2.3,
+                    "ascent": 458,
+                    "descent": -458,
+                    "high": 5961,
+                    "low": 5503,
+                    "longitude": -105.2942,
+                    "latitude": 40.0207,
+                    "conditionStatus": "Minor Issues",
+                    "conditionDetails": "Mostly Dry, Some Mud: Small patches of ice and minimal mud, did not need microspikes.",
+                    "conditionDate": "2020-01-01 18:05:30"
+                },
+                {
+                    "id": 7000000,
+                    "name": "Mount Sanitas Loop",
+                    "type": "Hike",
+                    "summary": "Very popular and scenic loop right from the edge of town.",
+                    "difficulty": "blueBlack",
+                    "stars": 4.2,
+                    "starVotes": 106,
+                    "location": "Boulder, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7000000\/mount-sanitas-loop",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_sqsmall_1555092747.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_small_1555092747.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_smallMed_1555092747.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_medium_1555092747.jpg",
+                    "length": 3.2,
+                    "ascent": 1281,
+                    "descent": -1280,
+                    "high": 6780,
+                    "low": 5521,
+                    "longitude": -105.2977,
+                    "latitude": 40.0202,
+                    "conditionStatus": "All Clear",
+                    "conditionDetails": "Dry",
+                    "conditionDate": "2020-01-26 11:10:58"
+                }
+            ],
+            "success": 1
+        }
+    http_version: null
+  recorded_at: Wed, 26 Feb 2020 03:52:07 GMT
+recorded_with: VCR 5.1.0
