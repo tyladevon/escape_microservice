@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.hikingproject.com/data/get-trails?key=200683561-7c95d710fabdc975bdd22885fc3c4615&lat=40.0274&lon=-105.2519&maxDistance=&maxResults=2&sort=distance
+    uri: https://www.hikingproject.com/data/get-trails?key=200683561-7c95d710fabdc975bdd22885fc3c4615&lat=40.0274&lon=-105.2519&maxDistance=&maxResults=2&minStars=&sort=distance
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 26 Feb 2020 03:52:07 GMT
+      - Wed, 26 Feb 2020 22:42:11 GMT
       Server:
       - Apache
       Access-Control-Allow-Origin:
@@ -29,7 +29,7 @@ http_interactions:
       Pragma:
       - no-cache
       X-Ap-Request-Id:
-      - 95368730-a234-4160-aea5-cd32dbccb385
+      - da07d51a-5ea5-4965-9119-f0db1be497ea
       Vary:
       - Accept-Encoding
       Content-Length:
@@ -95,5 +95,5 @@ http_interactions:
             "success": 1
         }
     http_version: null
-  recorded_at: Wed, 26 Feb 2020 03:52:07 GMT
+  recorded_at: Wed, 26 Feb 2020 22:42:07 GMT
 recorded_with: VCR 5.1.0
