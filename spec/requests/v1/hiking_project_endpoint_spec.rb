@@ -37,6 +37,25 @@ describe "Hiking Project API endpoint" do
     expect(parsed_hikes.first).to have_key('low')
   end
 
+  it 'returns hikes of a minimum stars value', :vcr do
+    get "/api/v1/hike_results?",
+      params= { lat: 40.0274,
+                lon: -105.2519,
+                max_dist: 10,
+                max_results: 5,
+                min_stars: 5
+      }
+
+
+    expect(last_response).to be_successful
+    parsed_hikes = JSON.parse(last_response.body)
+
+    expect(parsed_hikes.count).to eq(1)
+
+    expect(parsed_hikes.first["name"]).to eq("Boy Scout")
+    expect(parsed_hikes.first["stars"]).to eq(5)
+  end
+
   describe 'sorting' do
     it 'returns hikes sorted by distance from lat/lng', :vcr do
       get "/api/v1/hike_results?",
