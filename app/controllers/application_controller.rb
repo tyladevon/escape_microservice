@@ -4,6 +4,7 @@ require 'json'
 require 'sinatra/activerecord'
 require './app/controllers/destinations_controller'
 require './app/controllers/climbs_controller'
+require './app/controllers/hikes_controller'
 
 class ApplicationController < Sinatra::Base
   get '/' do
@@ -18,6 +19,12 @@ class ApplicationController < Sinatra::Base
 
   get '/api/v1/climb_results' do
     response = ClimbsController.search(params)
+    content_type :json
+    response.to_json
+  end
+
+  get '/api/v1/hike_results' do
+    response = HikesController.search(params)
     content_type :json
     response.to_json
   end

@@ -1,0 +1,174 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.hikingproject.com/data/get-trails?key=200683561-7c95d710fabdc975bdd22885fc3c4615&lat=40.0274&lon=-105.2519&maxDistance=10&maxResults=5&sort=distance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 26 Feb 2020 03:32:02 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private
+      Pragma:
+      - no-cache
+      X-Ap-Request-Id:
+      - 949f91a3-5a3c-47d1-adde-a46411dcf13c
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1477'
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+            "trails": [
+                {
+                    "id": 7006781,
+                    "name": "Dakota Ridge to Sanitas Valley Loop",
+                    "type": "Hike",
+                    "summary": "A technical ascent with a great view of Boulder, followed by a nice, open downhill pitch.",
+                    "difficulty": "greenBlue",
+                    "stars": 4,
+                    "starVotes": 8,
+                    "location": "Boulder, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7006781\/dakota-ridge-to-sanitas-valley-loop",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_sqsmall_1554158942.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_small_1554158942.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_smallMed_1554158942.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/hike\/7000176_medium_1554158942.jpg",
+                    "length": 2.3,
+                    "ascent": 458,
+                    "descent": -458,
+                    "high": 5961,
+                    "low": 5503,
+                    "longitude": -105.2942,
+                    "latitude": 40.0207,
+                    "conditionStatus": "Minor Issues",
+                    "conditionDetails": "Mostly Dry, Some Mud: Small patches of ice and minimal mud, did not need microspikes.",
+                    "conditionDate": "2020-01-01 18:05:30"
+                },
+                {
+                    "id": 7000000,
+                    "name": "Mount Sanitas Loop",
+                    "type": "Hike",
+                    "summary": "Very popular and scenic loop right from the edge of town.",
+                    "difficulty": "blueBlack",
+                    "stars": 4.2,
+                    "starVotes": 106,
+                    "location": "Boulder, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7000000\/mount-sanitas-loop",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_sqsmall_1555092747.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_small_1555092747.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_smallMed_1555092747.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_medium_1555092747.jpg",
+                    "length": 3.2,
+                    "ascent": 1281,
+                    "descent": -1280,
+                    "high": 6780,
+                    "low": 5521,
+                    "longitude": -105.2977,
+                    "latitude": 40.0202,
+                    "conditionStatus": "All Clear",
+                    "conditionDetails": "Dry",
+                    "conditionDate": "2020-01-26 11:10:58"
+                },
+                {
+                    "id": 7004226,
+                    "name": "Sunshine Lion's Lair Loop",
+                    "type": "Hike",
+                    "summary": "Great Mount Sanitas views are the reward for this gentler loop in Sunshine Canyon.",
+                    "difficulty": "blue",
+                    "stars": 4.5,
+                    "starVotes": 107,
+                    "location": "Boulder, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7004226\/sunshine-lions-lair-loop",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_sqsmall_1555092747.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_small_1555092747.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_smallMed_1555092747.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/hike\/7039883_medium_1555092747.jpg",
+                    "length": 5.3,
+                    "ascent": 1261,
+                    "descent": -1282,
+                    "high": 6800,
+                    "low": 5530,
+                    "longitude": -105.2979,
+                    "latitude": 40.02,
+                    "conditionStatus": "Minor Issues",
+                    "conditionDetails": "Snowy, Some Mud - lower and middle parts of Sunshine Canyon were muddy and slick, but overall traction wasn't necessary. completely dry on Lion's Lair and descent",
+                    "conditionDate": "2020-01-05 20:47:44"
+                },
+                {
+                    "id": 7053374,
+                    "name": "Indian Peaks Traverse (IPT)",
+                    "type": "Hike",
+                    "summary": "An epic, long distance trail connecting Boulder to Winter Park, and one that is in the process of substantial upgrades!",
+                    "difficulty": "blueBlack",
+                    "stars": 4.3,
+                    "starVotes": 3,
+                    "location": "Boulder, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7053374\/indian-peaks-traverse-ipt",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7017003_sqsmall_1554828628.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7017003_small_1554828628.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/hike\/7017003_smallMed_1554828628.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/hike\/7017003_medium_1554828628.jpg",
+                    "length": 71.2,
+                    "ascent": 9173,
+                    "descent": -5813,
+                    "high": 11665,
+                    "low": 5425,
+                    "longitude": -105.2946,
+                    "latitude": 40.0137,
+                    "conditionStatus": "Minor Issues",
+                    "conditionDetails": "Snowy, Icy - Fresh snowfall. Be sure to bring crampons.",
+                    "conditionDate": "2019-12-29 21:37:58"
+                },
+                {
+                    "id": 7004682,
+                    "name": "Royal Arch Out and Back",
+                    "type": "Hike",
+                    "summary": "A classic Boulder hike to a natural arch with great views.",
+                    "difficulty": "blueBlack",
+                    "stars": 4.4,
+                    "starVotes": 148,
+                    "location": "Boulder, Colorado",
+                    "url": "https:\/\/www.hikingproject.com\/trail\/7004682\/royal-arch-out-and-back",
+                    "imgSqSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7002679_sqsmall_1554226731.jpg",
+                    "imgSmall": "https:\/\/cdn-files.apstatic.com\/hike\/7002679_small_1554226731.jpg",
+                    "imgSmallMed": "https:\/\/cdn-files.apstatic.com\/hike\/7002679_smallMed_1554226731.jpg",
+                    "imgMedium": "https:\/\/cdn-files.apstatic.com\/hike\/7002679_medium_1554226731.jpg",
+                    "length": 3.3,
+                    "ascent": 1311,
+                    "descent": -1312,
+                    "high": 6917,
+                    "low": 5691,
+                    "longitude": -105.283,
+                    "latitude": 39.9997,
+                    "conditionStatus": "Minor Issues",
+                    "conditionDetails": "Icy - Some wet\/muddy areas and scattered ice but minor",
+                    "conditionDate": "2020-02-02 15:56:29"
+                }
+            ],
+            "success": 1
+        }
+    http_version: null
+  recorded_at: Wed, 26 Feb 2020 03:32:02 GMT
+recorded_with: VCR 5.1.0
