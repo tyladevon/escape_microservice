@@ -25,7 +25,6 @@ class ApplicationController < Sinatra::Base
 
   get '/api/v1/hike_results' do
     response = HikesController.search(params)
-    # response = HTTParty.get("https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=#{ENV['HIKE_API_KEY']}")
     content_type :json
     response.to_json
   end
