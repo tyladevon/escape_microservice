@@ -28,6 +28,10 @@ describe "Mountain Project API endpoint" do
 
     first_route = parsed_routes.first
     expect(first_route["name"]).to eq("The Naked Edge")
+    expect(first_route["type"]).to eq("Trad")
+    expect(first_route["rating"]).to eq("5.11b")
+    expect(first_route["stars"]).to eq(4.9)
+    expect(first_route["url"]).to eq("https:\/\/www.mountainproject.com\/route\/105748786\/the-naked-edge")
   end
 
   # it "text" do
