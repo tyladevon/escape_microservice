@@ -19,8 +19,18 @@ describe "Mountain Project API endpoint" do
             max_dist: max_dist_param,
             min_diff: min_diff_param,
             max_diff: max_diff_param}
+
     expect(last_response).to be_successful
+
     parsed_routes = JSON.parse(last_response.body)["routes"]
+
     expect(parsed_routes.count).to eq(50)
+
+    first_route = parsed_routes.first
+    expect(first_route["name"]).to eq("The Naked Edge")
   end
+
+  # it "text" do
+  #
+  # end
 end
