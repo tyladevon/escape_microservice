@@ -65,9 +65,24 @@ The base url to query is: https://escape-app-api.herokuapp.com/api/v1/
 No API key is required.
 
 ## Location
-**Details coming soon!
+Endpoint: `destination/:place`
 
-`destination/:place`
+Below example for: `destination/denver`
+````
+{
+  "data": {
+    "id": "648",
+    "type": "destination",
+    "attributes": {
+      "name": "Denver",
+      "full_address": "Denver, CO, USA",
+      "longitude": -104.990251,
+      "latitude": 39.7392358
+     }
+   }
+}
+````
+
 
 ## Climbing
 **Details coming soon!
